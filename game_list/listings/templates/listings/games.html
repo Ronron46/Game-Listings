@@ -1,0 +1,37 @@
+{% extends 'listings/base.html' %}
+{% load static %}
+
+{% block style %} 
+<link rel="stylesheet" href="{% static 'listings/style2.css' %}"> 
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<a class="create" href="{% url 'game_create' %}"> Ajouter un jeu</a>
+<h2> mes jeux :</h2>
+<section class="game-table">
+        <table id="list_game">
+            <thead>
+                <tr>
+                    <th id="prime">Jeux ↓</th>
+                    <th>Plateforme ↓</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for game in gamel %}
+                <tr>
+                    <td><a href="{% url 'game_detail' game.2 %}"><a class="ord">{{game.0}}</a></a></td> <td> {% for p in game.1 %} <a href="{% url 'plateforme_detail' p.1 %}"><a class="ord">{{p.0}}</a></a> {% endfor %}</td>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+
+</section>
+<p>oui</p>
+<a href="#" id="myBtn" class="top-hover" >Retour en haut</a>
+
+<script src="{% static 'listings/table_script.js' %}"></script>
+{% endblock %}

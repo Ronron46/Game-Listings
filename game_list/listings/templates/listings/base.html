@@ -1,0 +1,19 @@
+{% load static %}
+
+<html>
+    <script src="{% static 'listings/script.js' %}"></script>
+    {% block script %} {% endblock %}
+    <head>
+        <title>Game List</title>
+        {% block style %} {% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="{% url 'game_list' %}">Liste de jeux</a>
+                <a href="{% url 'plateformes' %}">listes des plateformes de jeu</a>
+            </nav>
+        </header>
+        {% block content %}{% endblock %}
+    </body>
+</html>

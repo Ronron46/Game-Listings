@@ -1,0 +1,22 @@
+{% extends 'listings/base.html' %}
+{% load static %}
+
+{% block style %} <link rel="stylesheet" href="{% static 'listings/style2.css' %}"> {% endblock %}
+
+{% block content %}
+<a class="create" href="{% url 'plateforme_add' %}">ajouter une plateforme</a>
+
+<h2> plateformes sur lesquels j'ai des jeux :</h2>
+
+<section>
+    <table class="plateforme">
+        {% for plateforme in plateformes %}
+        <tr><td> <a href="{% url 'plateforme_detail' plateforme.id %}">{{plateforme.name}}</a></td></tr>
+        {% endfor %}
+    </table>
+</section>
+<br>
+
+
+
+{% endblock %}

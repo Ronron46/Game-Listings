@@ -1,0 +1,70 @@
+body {background-color: grey;}
+
+h2 {
+    text-align: center;
+}
+
+
+header {background-color: rgba(124, 0, 0, 0.301);
+margin: 15px;
+padding: 5px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 15px;
+
+}
+
+th {
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: black;
+    color: white;
+}
+
+table {
+    border: solid black;
+    border-collapse: collapse;
+    margin: auto;
+    width: 50%;
+    text-align: center ;
+    margin-bottom: 1000000px;
+}
+
+.create {
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+}
+
+
+.plateforme {
+    padding-top: 20px;
+    width: 25%;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+}
+
+
+#myBtn.show {
+    display:block;
+    opacity: 1;
+}

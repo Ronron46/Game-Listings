@@ -1,0 +1,20 @@
+{% extends 'listings/base.html' %}
+{% load static %}
+
+{% block style %} <link rel="stylesheet" href="{% static 'listings/style1.css' %}"> {% endblock %}
+
+{% block content %}
+<h2> jeux que je possède sur {{plateforme.name}}</h2>
+
+<ul>
+    {% for game in gamep%}
+    <li><a href="{% url 'game_detail' game.id %}"> {{game.title}} </a></li>
+    {% endfor %}
+</ul>
+
+<br>
+<a href="{% url 'plateforme_edit' plateforme.id %}">Editer la plateforme</a>
+<br>
+<a href="{% url 'plateforme_delete' plateforme.id %}"> Supprimer la plateforme</a>
+
+{% endblock %}
