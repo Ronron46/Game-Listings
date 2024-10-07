@@ -23,7 +23,7 @@
             <tbody>
                 {% for game in gamel %}
                 <tr>
-                    <td><a href="{% url 'game_detail' game.2 %}"><a class="ord">{{game.0}}</a></a></td> <td> {% for p in game.1 %} <a href="{% url 'plateforme_detail' p.1 %}"><a class="ord">{{p.0}}</a></a> {% endfor %}</td>
+                    <td><a href="{% url 'game_detail' game.2 %}">{{game.0}}</a></td> <td> {% for p in game.1 %} <a href="{% url 'plateforme_detail' p.1 %}">{{p.0}}</a> {% endfor %}</td>
                 {% endfor %}
                 </tr>
             </tbody>
